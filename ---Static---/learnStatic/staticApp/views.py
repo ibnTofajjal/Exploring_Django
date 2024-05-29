@@ -35,3 +35,9 @@ def github(request):
         },
     ]
     return render(request, 'staticApp/github.html', context={'dummyData': dummyData})
+
+
+
+def about(request):
+    print(request.GET)
+    return render(request, 'staticApp/about.html', {'user': request.GET})
