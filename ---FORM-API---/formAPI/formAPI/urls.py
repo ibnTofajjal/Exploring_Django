@@ -8,6 +8,7 @@ urlpatterns = [
     path('', views.index, name='home'),
 
     #APP Access
-    path('about/', include('form_APP.urls'), name='about')
+    path('', include('form_APP.urls'))
+
 
 ]
