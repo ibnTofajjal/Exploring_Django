@@ -9,7 +9,4 @@ def home(request):
 
 def delete_student(request, id):
     targeted_student = models.Students.objects.get(pk = id).delete()
-    # return redirect("homepage")
-    print(targeted_student)
-    data = models.Students.objects.all()
-    return render(request, 'home.html',{"data": data})
+    return redirect("homepage")
