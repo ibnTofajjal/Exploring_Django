@@ -4,7 +4,7 @@ from . import models
 class AuthorForm(forms.ModelForm):
     class Meta:
         model = models.Author
-        fields= '__all__'
+        fields = '__all__'
         # fields= ['name', 'bio'] --> include
         # exclude= ['bio'] 
         
