@@ -25,3 +25,9 @@ def edit_post(request, id):
             post_form.save()
             return redirect("homepage")
     return render(request, "add_post.html", {"forms": post_form}) 
+
+
+def delete_post(request, id):
+    post = Post.objects.get(pk=id)
+    post.delete()
+    return redirect("homepage")
